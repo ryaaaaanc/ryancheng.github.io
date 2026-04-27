@@ -174,25 +174,23 @@
             width: 160px;
             height: 200px;
             border-radius: 10px;
-            background: var(--bg-alt);
+            background-color: var(--bg-alt);
+            background-image: url("images/image1d.png");
+            background-size: cover;
+            background-position: center 38%;
+            background-repeat: no-repeat;
             border: 1px solid var(--border);
             overflow: hidden;
             position: relative;
-        }
-
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 38%;
-            display: block;
             filter: saturate(0.88) contrast(0.96) brightness(1.01);
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
         }
         .photo-placeholder {
             position: absolute; inset: 0;
             display: flex; align-items: center; justify-content: center;
         }
-        .photo-placeholder svg { opacity: 0.2; }
         .about-body p {
             font-size: 1rem;
             color: var(--text-secondary);
@@ -379,9 +377,7 @@
     <section id="about" class="section">
         <div class="section-label">About</div>
         <div class="about-grid">
-            <div class="photo-frame">
-                <img src="images/image1d.png" alt="Ryan Cheng">
-            </div>
+            <div class="photo-frame" role="img" aria-label="Ryan Cheng" oncontextmenu="return false;"></div>
             <div class="about-body">
                 <p>
                     I am a Finance PhD candidate at INSEAD. 
